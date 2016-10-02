@@ -1,0 +1,5 @@
+# Set default behaviour, in case users don't have core.autocrlf set
+* test=auto
+
+# Declare files that will always have CRLF line endings on checkout
+*.py text eol=lf

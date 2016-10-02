@@ -97,9 +97,11 @@ def test_connection(url):
     pass
 
 
-def make_response(code, content):
+def make_response(code, content, headers=None):
     r = requests.Response()
     r.status_code = code
+    if headers is not None:
+        r.headers = headers
     if content is not None:
         r.raw = six.BytesIO(six.b(json.dumps(content)))
     return r
